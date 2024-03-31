@@ -3,12 +3,12 @@ import { userState } from "../states/userState"
 
 const UserData = () => {
     const userData = useRecoilValue(userState)
-    console.log(userData);
 
     return (
-        <div>
-            <p>{userData.loggedIn}</p>
-        </div>
+        <>
+            {userData.loggedIn && <p>Hello {userData.username}</p>}
+        </>
+
     )
 }
 

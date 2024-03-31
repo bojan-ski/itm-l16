@@ -17,6 +17,7 @@ const Login = () => {
         }
 
         setUserState({
+            'username': 'Admin',
             'loggedIn': true
         })
     }
@@ -29,7 +30,7 @@ const Login = () => {
     return (
         !userData.loggedIn ?
             (
-                <form onSubmit={handleSubmit}>
+                <form className="login-form" onSubmit={handleSubmit} >
                     <input type="text" placeholder="Please enter your email address" onInput={e => setEmail(e.target.value)} />
                     <input type="password" placeholder="Please enter your password" onInput={e => setPassword(e.target.value)} />
 
@@ -38,7 +39,7 @@ const Login = () => {
                     </button>
                 </form>
             ) : (
-                <button type="submit" onClick={logoutUser}>
+                <button type="submit" className="logout-btn" onClick={logoutUser}>
                     Log Out
                 </button>
             )

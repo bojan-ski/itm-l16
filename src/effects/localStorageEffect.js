@@ -1,5 +1,3 @@
-
-
 const localStorageEffect = () => ({ setSelf, onSet }) => {
   const savedValues = localStorage.getItem('userData')
 

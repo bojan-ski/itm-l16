@@ -1,8 +1,14 @@
+import { RecoilRoot } from "recoil"
+import Login from "./components/Login"
+import UserData from "./components/UserData"
 
-function App() {
+const App = () => {
   return (
     <>
-      <h1>Hello World</h1>
+      <RecoilRoot>
+        <UserData/>
+        <Login/>
+      </RecoilRoot>
     </>
   )
 }
